@@ -8,42 +8,42 @@ const projects = [
   {
     title: "Smart India Hackathon 2025",
     subtitle: "Pre-Finalist",
-    tags: ["Prototyping", "Scalability"],
+    tags: ["Prototyping", "Scalability", "Teamwork"],
     description:
-      "Designed and developed a scalable working prototype for a real-world industry problem under strict timelines.",
+      "Designed and developed a working software prototype for a real-world industry problem. Implemented core features with focus on performance, correctness, and scalability under strict timelines.",
     image:
       "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop",
     color: "oklch(0.65 0.19 250)",
   },
   {
-    title: "Email Header Analysis for Phishing Detection",
-    subtitle: "ICSFT Submission",
-    tags: ["Machine Learning", "Explainable AI"],
+    title: "E-Commerce Platform",
+    subtitle: "Full-Stack Application",
+    tags: ["Python", "SQL", "REST APIs", "Auth"],
     description:
-      "Research paper applying explainable AI techniques to detect metadata anomalies in email headers for phishing identification.",
+      "Built a full-stack web application using Python and SQL with secure user authentication. Implemented product catalog, cart management, and order workflows following REST principles.",
     image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2670&auto=format&fit=crop",
-    color: "oklch(0.65 0.17 310)",
+      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2670&auto=format&fit=crop",
+    color: "oklch(0.7 0.16 55)",
   },
   {
-    title: "Automated Classroom Monitoring System",
-    subtitle: "Real-time Detection",
-    tags: ["Real-time ML", "Live Camera Feeds"],
+    title: "Automated Classroom Monitoring",
+    subtitle: "Real-time ML System",
+    tags: ["Machine Learning", "Computer Vision", "Real-time"],
     description:
-      "Automated activity detection using live camera feeds and scalable machine learning models for classroom environments.",
+      "Developed a real-time monitoring system using live camera feeds and machine learning models. Automated activity detection and data processing for scalable classroom monitoring.",
     image:
       "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2670&auto=format&fit=crop",
     color: "oklch(0.65 0.17 160)",
   },
   {
-    title: "E-Commerce Platform",
-    subtitle: "Full-Stack Application",
-    tags: ["Python", "SQL", "REST APIs"],
+    title: "Networking & Systems Projects",
+    subtitle: "Low-Level Networking",
+    tags: ["TCP/IP", "Client-Server", "Sockets"],
     description:
-      "Built with Python and SQL featuring secure user authentication, catalog management, and RESTful API architecture.",
+      "Implemented client-server applications using TCP/IP to understand low-level networking behavior, socket programming, and distributed system communication patterns.",
     image:
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2670&auto=format&fit=crop",
-    color: "oklch(0.7 0.16 55)",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2670&auto=format&fit=crop",
+    color: "oklch(0.65 0.17 310)",
   },
 ]
 
@@ -149,10 +149,10 @@ function ProjectCard({
 
 export function Projects() {
   return (
-    <section
-      id="projects"
-      className="relative px-6 py-28 lg:px-8"
-    >
+    <section id="projects" className="relative px-6 py-28 lg:px-8">
+      {/* Subtle divider glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+
       {/* Subtle background accent */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent" />
 

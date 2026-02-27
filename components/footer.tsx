@@ -6,6 +6,9 @@ import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react"
 export function Footer() {
   return (
     <footer id="contact" className="relative border-t border-border px-6 py-28 lg:px-8">
+      {/* Subtle divider glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

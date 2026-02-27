@@ -5,9 +5,11 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { label: "Work", href: "#projects" },
+  { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Research", href: "#research" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -17,7 +19,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -41,7 +43,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -62,7 +64,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="text-foreground md:hidden"
+          className="text-foreground lg:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -76,7 +78,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-b border-border bg-background/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-b border-border bg-background/95 backdrop-blur-xl lg:hidden"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((link) => (

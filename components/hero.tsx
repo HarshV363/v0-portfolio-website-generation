@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Download } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Hero() {
@@ -54,8 +54,9 @@ export function Hero() {
           </h1>
 
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground lg:text-xl">
-            Pre-final year Computer Science undergraduate specializing in
-            backend systems, ML, and scalable architecture.
+            Pre-final year CS undergrad building scalable backend systems,
+            full-stack applications, and applied ML research from Bengaluru,
+            India.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
@@ -73,8 +74,7 @@ export function Hero() {
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur-sm transition-all hover:bg-secondary/70"
             >
-              <Download size={16} />
-              Download CV
+              Get In Touch
             </a>
           </div>
         </motion.div>

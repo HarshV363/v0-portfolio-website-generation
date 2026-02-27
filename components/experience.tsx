@@ -9,22 +9,31 @@ const timeline = [
     title: "Freelance Intern",
     org: "Bengaluru, India",
     date: "Present",
-    description:
-      "Backend logic planning and API-level design for ongoing projects, improving development workflows and system architecture.",
+    bullets: [
+      "Supported software development initiatives through technical documentation, data analysis, and requirement analysis.",
+      "Assisted in backend logic planning and API-level design for ongoing projects.",
+      "Collaborated with team members to improve development workflows and delivery efficiency.",
+    ],
   },
   {
     type: "education" as const,
-    title: "B.Tech Computer Science",
-    org: "Dayananda Sagar University",
-    date: "2023 - 2027",
-    description:
-      "Focusing on data structures, full-stack development, and applied machine learning research.",
+    title: "B.Tech in Computer Science",
+    org: "Dayananda Sagar University, Bengaluru",
+    date: "Jul 2023 - Aug 2027 (Expected)",
+    bullets: [
+      "Core focus on data structures, algorithms, and object-oriented programming.",
+      "Hands-on coursework in full-stack development, database design, and systems networking.",
+      "Active participant in hackathons and applied research projects.",
+    ],
   },
 ]
 
 export function Experience() {
   return (
     <section id="experience" className="relative px-6 py-28 lg:px-8">
+      {/* Subtle divider glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,9 +78,7 @@ export function Experience() {
                 >
                   <div
                     className={`mb-3 flex items-center gap-2 ${
-                      i % 2 === 0
-                        ? "md:flex-row-reverse"
-                        : "md:flex-row"
+                      i % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
                     }`}
                   >
                     {item.type === "work" ? (
@@ -86,12 +93,23 @@ export function Experience() {
                   <h3 className="mb-1 text-lg font-bold text-foreground">
                     {item.title}
                   </h3>
-                  <p className="mb-3 text-sm text-muted-foreground">
+                  <p className="mb-4 text-sm text-muted-foreground">
                     {item.org}
                   </p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {item.description}
-                  </p>
+                  <ul
+                    className={`space-y-2 ${
+                      i % 2 === 0 ? "md:text-right" : "md:text-left"
+                    }`}
+                  >
+                    {item.bullets.map((bullet, j) => (
+                      <li
+                        key={j}
+                        className="text-sm leading-relaxed text-muted-foreground"
+                      >
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Spacer for alternate layout */}
