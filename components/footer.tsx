@@ -162,30 +162,17 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-6 border-t border-border pt-8 md:flex-row">
           <div className="flex items-center gap-6">
-            
-              href="mailto:harshverma362004@gmail.com"
-              className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-            >
+            <a href="mailto:harshverma362004@gmail.com" className="group flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground">
               <Mail size={16} />
               <span>harshverma362004@gmail.com</span>
             </a>
           </div>
 
           <div className="flex items-center gap-3">
-            
-              href="https://linkedin.com/in/harsh-verma-552161334"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/30 text-muted-foreground transition-all hover:border-accent/40 hover:bg-card/60 hover:text-foreground"
-            >
+            <a href="https://linkedin.com/in/harsh-verma-552161334" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/30 text-muted-foreground transition-all hover:border-accent/40 hover:bg-card/60 hover:text-foreground">
               <Linkedin size={16} />
             </a>
-            
-              href="#"
-              aria-label="GitHub"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/30 text-muted-foreground transition-all hover:border-accent/40 hover:bg-card/60 hover:text-foreground"
-            >
+            <a href="#" aria-label="GitHub" className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/30 text-muted-foreground transition-all hover:border-accent/40 hover:bg-card/60 hover:text-foreground">
               <Github size={16} />
             </a>
           </div>
