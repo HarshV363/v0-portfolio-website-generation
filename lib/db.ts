@@ -23,8 +23,13 @@ function createPool() {
   })
 }
 
-export const pool = global._pgPool ?? createPool()
-
-if (process.env.NODE_ENV !== "production") {
-  global._pgPool = pool
+// Lazily create the pool on first real use, instead of at module load time.
+// Next.js "collects page data" for API routes during the build step, which
+// imports this module without the runtime environment available — throwing
+// here at import time breaks the build itself, not just missing-env-var requests.
+export function getPool(): Pool {
+  if (!global._pgPool) {
+    global._pgPool = createPool()
+  }
+  return global._pgPool
 }
