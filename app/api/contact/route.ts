@@ -49,8 +49,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true })
   } catch (err) {
     console.error("Contact form submission failed:", err)
+    const debugDetail = err instanceof Error ? err.message : String(err)
     return NextResponse.json(
-      { error: "Something went wrong. Please try again later." },
+      {
+        error: "Something went wrong. Please try again later.",
+        debug: debugDetail,
+      },
       { status: 500 }
     )
   }
