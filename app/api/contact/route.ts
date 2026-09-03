@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server"
-import { pool } from "@/lib/db"
+import { getPool } from "@/lib/db"
 
 let tableReady = false
 
 async function ensureTable() {
   if (tableReady) return
-  await pool.query(`
+  await getPool().query(`
     CREATE TABLE IF NOT EXISTS messages (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
     await ensureTable()
 
-    await pool.query(
+    await getPool().query(
       `INSERT INTO messages (name, email, message) VALUES ($1, $2, $3)`,
       [name, email, message]
     )
