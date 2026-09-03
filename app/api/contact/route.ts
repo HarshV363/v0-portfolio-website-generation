@@ -17,6 +17,18 @@ async function ensureTable() {
   tableReady = true
 }
 
+export async function GET() {
+  const raw = process.env.DATABASE_URL || "(not set)"
+  let redacted = raw
+  try {
+    const url = new URL(raw)
+    redacted = `${url.protocol}//${url.username}:***@${url.hostname}:${url.port}${url.pathname}${url.search}`
+  } catch {
+    // leave as-is if it's not a parseable URL at all
+  }
+  return NextResponse.json({ databaseUrlRedacted: redacted })
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
