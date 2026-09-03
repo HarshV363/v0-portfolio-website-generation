@@ -45,7 +45,6 @@ export function Footer() {
 
   return (
     <footer id="contact" className="relative border-t border-border px-6 py-28 lg:px-8">
-      {/* Subtle divider glow */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
 
       <div className="mx-auto max-w-5xl">
@@ -70,7 +69,6 @@ export function Footer() {
           </p>
         </motion.div>
 
-        {/* Contact form area */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -162,7 +160,6 @@ export function Footer() {
           </form>
         </motion.div>
 
-        {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-6 border-t border-border pt-8 md:flex-row">
           <div className="flex items-center gap-6">
             
