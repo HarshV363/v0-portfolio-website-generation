@@ -16,9 +16,14 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Harsh Verma | Software Development Engineer",
+  title: "Harsh Verma — AI/ML · Full-Stack · Business Development",
   description:
-    "Pre-final year Computer Science undergraduate specializing in backend systems, ML, and scalable architecture.",
+    "Harsh Verma is a Computer Science undergraduate building machine learning models, full-stack applications and B2B partnerships from Bengaluru.",
+  openGraph: {
+    title: "Harsh Verma — AI/ML · Full-Stack · Business Development",
+    description: "Computer Science undergraduate building thoughtful systems and partnerships.",
+    type: "website",
+  },
   generator: "v0.app",
   icons: {
     icon: [
